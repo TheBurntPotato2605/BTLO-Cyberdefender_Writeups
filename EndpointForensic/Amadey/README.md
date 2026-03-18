@@ -40,6 +40,8 @@ Following the malware link with the C2C, the malware is likely fetching addition
 
 The previous question’s picture also indicates that the malware have two external connections using port 80 (likely that it tried to download something)
 
+**Answers: 2**
+
 **Q5**
 
 Identifying the storage points of these additional components is critical for containment and cleanup. What is the full path of the file downloaded and used by the malware in its malicious activity?
