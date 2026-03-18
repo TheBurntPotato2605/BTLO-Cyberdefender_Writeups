@@ -17,7 +17,7 @@ In this technique, after using stolen credentials, hacker may take advantage of 
 
 **2**.  You were analyzing a log and found uncommon data flow on port 4050. What APT group might this be? 
 
-        This group used a non-standard port to make external communication
+This group used a non-standard port to make external communication
 
 <img width="940" height="120" alt="image" src="https://github.com/user-attachments/assets/cb0e38e4-91d0-4b3d-9a30-7ff326b4e2e1" />
 
