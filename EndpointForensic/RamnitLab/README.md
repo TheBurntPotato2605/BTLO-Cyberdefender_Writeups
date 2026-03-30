@@ -31,53 +31,46 @@ Your task is to analyze this dump, trace the malware’s actions, and report key
 
 ## 🔍 Analysis
 
+* First, we have to identify the suspicious process in this memory dump and investigate further. As reviewing pstree and pslist doesn't reveal anything useful for our investigation, i use netstat and realize some suspicious connection
+
+* <img width="934" height="543" alt="image" src="https://github.com/user-attachments/assets/5431f000-b628-49c8-a7c9-e394001fc141" />
+
+As we know, in TCP three-way handshake, a sender want to establish a connection to a target must send a SYN first. If they agree they will send back a SYN ACK meaning i can see you and finally the sender will send  ACK. After that, they can communicate and the state will be changed to ESTABLISHED. Here, the process ChromeSetup.exe send SYN to IP address of 58.64.204.181 on port 5202. This is quite suspicious as why a setup executable file for a browser has to establish a connection to external IP with a non-popular port like 5202.
+
+* Using IP reputation tool like AbuseIPDB to search for this suspicious IP, the report shows that this IP maybe used for scan and hacking purpose.
+
+  <img width="1520" height="337" alt="image" src="https://github.com/user-attachments/assets/a9a2b514-892d-4470-be6f-300f6fa05b73" />
+
+* Further investigate use the process's hash with Virustotal show that this is flagged as suspicious by 64/72 vendors
+
+  <img width="1914" height="899" alt="image" src="https://github.com/user-attachments/assets/c4adaa01-1268-4818-9d5a-b54d273d1164" />
+
 
 
 ---
 
 ### Key Artifact Identification
 
-* Indicator 1: 
-* Indicator 2: 
+* Indicator 1: SYN SENT of ChromeSetup.exe
+* Indicator 2: Uncommon port 5202
 
-👉 Significance:
-
-* [Why these matter]
-
----
-
-
-
-## 🗺️ Attack Flow / Timeline
 
 
 ---
 
-## 🧬 Threat Context (Optional but Strong)
+## 🧬 Threat Context 
 
 * **Tactic:** Execution, Defense Evasion, Command and Control
-* **Technique:** 
-
----
-
-## 🛡️ Detection Opportunities
-
-* Monitor for:
-
-  * Unusual patterns or anomalies
-  * Suspicious access or behavior
-* Create alerts for:
-
-  * Known indicators
-  * Abnormal activity patterns
+* **Technique:** T1024, T1036, T1071
 
 ---
 
 
 ## 💡 Lessons Learned
 
-* Key takeaway from the investigation
-* What could have prevented or detected this earlier
+* Review every plugins if possible when you have no idea of the malicious activity
+* Always check for suspicious IP/Port even if it s from the legit process
+* The hash of the process sometimes can reveal useful things for our investigation, especially when combine with Virustotal
 
 ---
 
