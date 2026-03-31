@@ -14,6 +14,7 @@ Analyze network traffic using Wireshark to identify DanaBot initial access, deob
 ## 📖 Scenario
 
 The SOC team has detected suspicious activity in the network traffic, revealing that a machine has been compromised. Sensitive company information has been stolen. 
+
 ---
 
 ## 🎯 Objectives
