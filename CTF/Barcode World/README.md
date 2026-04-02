@@ -23,6 +23,10 @@ The CTF challenge provide us with 9347 .png files from 1.png to 9347.png. They l
 <img width="128" height="417" alt="image" src="https://github.com/user-attachments/assets/a1da6466-fcd1-40fb-9588-9c48c5be8d76" />
 
 * They remind me of the ASCII character and they are divided by blank space (65 = A, 32 = space). So i try write one more script to interpret the data i achieved before, the digits must be grouped and converted.
+
+<img width="636" height="499" alt="image" src="https://github.com/user-attachments/assets/1c0cd15d-9f39-471a-b379-1345d08131fe" />
+
+
 * This new script can read from the previous result file, detect the blank seperator, build number from each digit, split them and then convert to character. Lastly, the output decoded character will be saved to a new file.
 
 <img width="616" height="389" alt="image" src="https://github.com/user-attachments/assets/2fbd9265-3e93-44da-8db2-a65ef099e570" />
