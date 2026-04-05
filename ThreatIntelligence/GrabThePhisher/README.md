@@ -111,9 +111,6 @@ Your task is to conduct threat intelligence analysis on the phishing infrastruct
 
 * **Technique:** T1566, T1056, T1567.002 
 
-
-## 💡 Lessons Learned
-
 ## 💡 Lessons Learned
 
 * Users should never enter seed phrases on third-party or untrusted websites.
