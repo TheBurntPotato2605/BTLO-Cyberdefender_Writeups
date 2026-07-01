@@ -68,14 +68,18 @@ Reconstruct a BlueSky ransomware attack by analyzing network traffic, decoding P
 
    <img width="764" height="515" alt="image" src="https://github.com/user-attachments/assets/049b3402-8153-47f5-9676-691f44f5d184" />
 
-* Following privilege escalation, the attacker attempted to download a file.http://87.96.21.84/checking.ps1
+* Following privilege escalation, the attacker attempted to download a file.[http://87.96.21.84/checking.ps1]
   
    <img width="1637" height="762" alt="image" src="https://github.com/user-attachments/assets/2f41f7b6-9108-4284-98f7-0b3ed27d2c98" />
 
    <img width="1639" height="754" alt="image" src="https://github.com/user-attachments/assets/792baf8d-87d1-4034-b74a-ecf5188ac53f" />
 
-* Understanding which group Security Identifier (SID) the malicious script checks to verify the current user's privileges can provide insights into the attacker's intentions. 
+* Understanding which group Security Identifier (SID) the malicious script checks to verify the current user's privileges can provide insights into the attacker's intentions. Checking the file attacker downloaded it show that he targeted SID of S-1-5-32-544
 
+  <img width="644" height="513" alt="image" src="https://github.com/user-attachments/assets/87686128-9697-4704-8ac7-1bf7ffeb30f7" />
+
+
+  
 
 
 
